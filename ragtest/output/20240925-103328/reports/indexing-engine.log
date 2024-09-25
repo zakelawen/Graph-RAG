@@ -1,0 +1,464 @@
+10:33:28,694 graphrag.index.cli INFO Logging enabled at E:\rag≤‚ ‘\ragtest\output\20240925-103328\reports\indexing-engine.log
+10:33:28,697 graphrag.index.cli INFO Starting pipeline run for: 20240925-103328, dryrun=False
+10:33:28,698 graphrag.index.cli INFO Using default configuration: {
+    "llm": {
+        "api_key": "==== REDACTED ====",
+        "type": "openai_chat",
+        "model": "llama3.1",
+        "max_tokens": 4000,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "n": 1,
+        "request_timeout": 180.0,
+        "api_base": "http://localhost:11434/v1",
+        "api_version": null,
+        "proxy": null,
+        "cognitive_services_endpoint": null,
+        "deployment_name": null,
+        "model_supports_json": true,
+        "tokens_per_minute": 0,
+        "requests_per_minute": 0,
+        "max_retries": 10,
+        "max_retry_wait": 10.0,
+        "sleep_on_rate_limit_recommendation": true,
+        "concurrent_requests": 25
+    },
+    "parallelization": {
+        "stagger": 0.3,
+        "num_threads": 50
+    },
+    "async_mode": "threaded",
+    "root_dir": "E:\\rag\u6d4b\u8bd5\\ragtest",
+    "reporting": {
+        "type": "file",
+        "base_dir": "E:\\rag\u6d4b\u8bd5\\ragtest\\output\\20240925-103328\\reports",
+        "storage_account_blob_url": null
+    },
+    "storage": {
+        "type": "file",
+        "base_dir": "E:\\rag\u6d4b\u8bd5\\ragtest\\output\\20240925-103328\\artifacts",
+        "storage_account_blob_url": null
+    },
+    "cache": {
+        "type": "file",
+        "base_dir": "cache",
+        "storage_account_blob_url": null
+    },
+    "input": {
+        "type": "file",
+        "file_type": "text",
+        "base_dir": "input",
+        "storage_account_blob_url": null,
+        "encoding": "utf-8",
+        "file_pattern": ".*\\.txt$",
+        "file_filter": null,
+        "source_column": null,
+        "timestamp_column": null,
+        "timestamp_format": null,
+        "text_column": "text",
+        "title_column": null,
+        "document_attribute_columns": []
+    },
+    "embed_graph": {
+        "enabled": false,
+        "num_walks": 10,
+        "walk_length": 40,
+        "window_size": 2,
+        "iterations": 3,
+        "random_seed": 597832,
+        "strategy": null
+    },
+    "embeddings": {
+        "llm": {
+            "api_key": "==== REDACTED ====",
+            "type": "openai_embedding",
+            "model": "nomic-embed-text",
+            "max_tokens": 4000,
+            "temperature": 0,
+            "top_p": 1,
+            "n": 1,
+            "request_timeout": 180.0,
+            "api_base": "http://localhost:11434/api",
+            "api_version": null,
+            "proxy": null,
+            "cognitive_services_endpoint": null,
+            "deployment_name": null,
+            "model_supports_json": null,
+            "tokens_per_minute": 0,
+            "requests_per_minute": 0,
+            "max_retries": 10,
+            "max_retry_wait": 10.0,
+            "sleep_on_rate_limit_recommendation": true,
+            "concurrent_requests": 25
+        },
+        "parallelization": {
+            "stagger": 0.3,
+            "num_threads": 50
+        },
+        "async_mode": "threaded",
+        "batch_size": 16,
+        "batch_max_tokens": 8191,
+        "target": "required",
+        "skip": [],
+        "vector_store": null,
+        "strategy": null
+    },
+    "chunks": {
+        "size": 300,
+        "overlap": 100,
+        "group_by_columns": [
+            "id"
+        ],
+        "strategy": null,
+        "encoding_model": null
+    },
+    "snapshots": {
+        "graphml": false,
+        "raw_entities": false,
+        "top_level_nodes": false
+    },
+    "entity_extraction": {
+        "llm": {
+            "api_key": "==== REDACTED ====",
+            "type": "openai_chat",
+            "model": "llama3.1",
+            "max_tokens": 4000,
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "n": 1,
+            "request_timeout": 180.0,
+            "api_base": "http://localhost:11434/v1",
+            "api_version": null,
+            "proxy": null,
+            "cognitive_services_endpoint": null,
+            "deployment_name": null,
+            "model_supports_json": true,
+            "tokens_per_minute": 0,
+            "requests_per_minute": 0,
+            "max_retries": 10,
+            "max_retry_wait": 10.0,
+            "sleep_on_rate_limit_recommendation": true,
+            "concurrent_requests": 25
+        },
+        "parallelization": {
+            "stagger": 0.3,
+            "num_threads": 50
+        },
+        "async_mode": "threaded",
+        "prompt": "prompts/entity_extraction.txt",
+        "entity_types": [
+            "organization",
+            "person",
+            "geo",
+            "event"
+        ],
+        "max_gleanings": 0,
+        "strategy": null,
+        "encoding_model": null
+    },
+    "summarize_descriptions": {
+        "llm": {
+            "api_key": "==== REDACTED ====",
+            "type": "openai_chat",
+            "model": "llama3.1",
+            "max_tokens": 4000,
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "n": 1,
+            "request_timeout": 180.0,
+            "api_base": "http://localhost:11434/v1",
+            "api_version": null,
+            "proxy": null,
+            "cognitive_services_endpoint": null,
+            "deployment_name": null,
+            "model_supports_json": true,
+            "tokens_per_minute": 0,
+            "requests_per_minute": 0,
+            "max_retries": 10,
+            "max_retry_wait": 10.0,
+            "sleep_on_rate_limit_recommendation": true,
+            "concurrent_requests": 25
+        },
+        "parallelization": {
+            "stagger": 0.3,
+            "num_threads": 50
+        },
+        "async_mode": "threaded",
+        "prompt": "prompts/summarize_descriptions.txt",
+        "max_length": 500,
+        "strategy": null
+    },
+    "community_reports": {
+        "llm": {
+            "api_key": "==== REDACTED ====",
+            "type": "openai_chat",
+            "model": "llama3.1",
+            "max_tokens": 4000,
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "n": 1,
+            "request_timeout": 180.0,
+            "api_base": "http://localhost:11434/v1",
+            "api_version": null,
+            "proxy": null,
+            "cognitive_services_endpoint": null,
+            "deployment_name": null,
+            "model_supports_json": true,
+            "tokens_per_minute": 0,
+            "requests_per_minute": 0,
+            "max_retries": 10,
+            "max_retry_wait": 10.0,
+            "sleep_on_rate_limit_recommendation": true,
+            "concurrent_requests": 25
+        },
+        "parallelization": {
+            "stagger": 0.3,
+            "num_threads": 50
+        },
+        "async_mode": "threaded",
+        "prompt": null,
+        "max_length": 2000,
+        "max_input_length": 8000,
+        "strategy": null
+    },
+    "claim_extraction": {
+        "llm": {
+            "api_key": "==== REDACTED ====",
+            "type": "openai_chat",
+            "model": "llama3.1",
+            "max_tokens": 4000,
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "n": 1,
+            "request_timeout": 180.0,
+            "api_base": "http://localhost:11434/v1",
+            "api_version": null,
+            "proxy": null,
+            "cognitive_services_endpoint": null,
+            "deployment_name": null,
+            "model_supports_json": true,
+            "tokens_per_minute": 0,
+            "requests_per_minute": 0,
+            "max_retries": 10,
+            "max_retry_wait": 10.0,
+            "sleep_on_rate_limit_recommendation": true,
+            "concurrent_requests": 25
+        },
+        "parallelization": {
+            "stagger": 0.3,
+            "num_threads": 50
+        },
+        "async_mode": "threaded",
+        "enabled": false,
+        "prompt": "prompts/claim_extraction.txt",
+        "description": "Any claims or facts that could be relevant to information discovery.",
+        "max_gleanings": 0,
+        "strategy": null,
+        "encoding_model": null
+    },
+    "cluster_graph": {
+        "max_cluster_size": 10,
+        "strategy": null
+    },
+    "umap": {
+        "enabled": false
+    },
+    "local_search": {
+        "text_unit_prop": 0.5,
+        "community_prop": 0.1,
+        "conversation_history_max_turns": 5,
+        "top_k_entities": 10,
+        "top_k_relationships": 10,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "n": 1,
+        "max_tokens": 12000,
+        "llm_max_tokens": 2000
+    },
+    "global_search": {
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "n": 1,
+        "max_tokens": 12000,
+        "data_max_tokens": 12000,
+        "map_max_tokens": 1000,
+        "reduce_max_tokens": 2000,
+        "concurrency": 32
+    },
+    "encoding_model": "cl100k_base",
+    "skip_workflows": []
+}
+10:33:28,718 graphrag.index.create_pipeline_config INFO skipping workflows 
+10:33:28,718 graphrag.index.run.run INFO Running pipeline
+10:33:28,718 graphrag.index.storage.file_pipeline_storage INFO Creating file storage at E:\rag≤‚ ‘\ragtest\output\20240925-103328\artifacts
+10:33:28,720 graphrag.index.input.load_input INFO loading input from root_dir=input
+10:33:28,720 graphrag.index.input.load_input INFO using file storage for input
+10:33:28,722 graphrag.index.storage.file_pipeline_storage INFO search E:\rag≤‚ ‘\ragtest\input for files matching .*\.txt$
+10:33:28,722 graphrag.index.input.text INFO found text files from input, found [('document.txt', {})]
+10:33:28,727 graphrag.index.input.text INFO Found 1 files, loading 1
+10:33:28,729 graphrag.index.workflows.load INFO Workflow Run Order: ['create_base_text_units', 'create_base_extracted_entities', 'create_summarized_entities', 'create_base_entity_graph', 'create_final_entities', 'create_final_nodes', 'create_final_communities', 'create_final_relationships', 'create_final_text_units', 'create_final_community_reports', 'create_base_documents', 'create_final_documents']
+10:33:28,729 graphrag.index.run.run INFO Final # of rows loaded: 1
+10:33:28,834 graphrag.index.run.workflow INFO dependencies for create_base_text_units: []
+10:33:28,839 datashaper.workflow.workflow INFO executing verb orderby
+10:33:28,844 datashaper.workflow.workflow INFO executing verb zip
+10:33:28,848 datashaper.workflow.workflow INFO executing verb aggregate_override
+10:33:28,855 datashaper.workflow.workflow INFO executing verb chunk
+10:33:29,1 datashaper.workflow.workflow INFO executing verb select
+10:33:29,5 datashaper.workflow.workflow INFO executing verb unroll
+10:33:29,11 datashaper.workflow.workflow INFO executing verb rename
+10:33:29,15 datashaper.workflow.workflow INFO executing verb genid
+10:33:29,20 datashaper.workflow.workflow INFO executing verb unzip
+10:33:29,24 datashaper.workflow.workflow INFO executing verb copy
+10:33:29,28 datashaper.workflow.workflow INFO executing verb filter
+10:33:29,73 graphrag.index.emit.parquet_table_emitter INFO emitting parquet table create_base_text_units.parquet
+10:33:29,210 graphrag.index.run.workflow INFO dependencies for create_base_extracted_entities: ['create_base_text_units']
+10:33:29,210 graphrag.utils.storage INFO read table from storage: create_base_text_units.parquet
+10:33:29,248 datashaper.workflow.workflow INFO executing verb entity_extract
+10:33:29,251 graphrag.llm.openai.create_openai_client INFO Creating OpenAI client base_url=http://localhost:11434/v1
+10:33:29,688 graphrag.index.llm.load_llm INFO create TPM/RPM limiter for llama3.1: TPM=0, RPM=0
+10:33:29,688 graphrag.index.llm.load_llm INFO create concurrency limiter for llama3.1: 25
+10:33:31,887 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 502 Bad Gateway"
+10:33:31,918 graphrag.index.reporting.file_workflow_callbacks INFO Error Invoking LLM details={'input': '\n-Goal-\nGiven a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.\n \n-Steps-\n1. Identify all entities. For each identified entity, extract the following information:\n- entity_name: Name of the entity, capitalized\n- entity_type: One of the following types: [organization,person,geo,event]\n- entity_description: Comprehensive description of the entity\'s attributes and activities\nFormat each entity as ("entity"<|><entity_name><|><entity_type><|><entity_description>)\n \n2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.\nFor each pair of related entities, extract the following information:\n- source_entity: name of the source entity, as identified in step 1\n- target_entity: name of the target entity, as identified in step 1\n- relationship_description: explanation as to why you think the source entity and the target entity are related to each other\n- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity\n Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)\n \n3. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.\n \n4. When finished, output <|COMPLETE|>\n \n######################\n-Examples-\n######################\nExample 1:\nEntity_types: ORGANIZATION,PERSON\nText:\nThe Verdantis\'s Central Institution is scheduled to meet on Monday and Thursday, with the institution planning to release its latest policy decision on Thursday at 1:30 p.m. PDT, followed by a press conference where Central Institution Chair Martin Smith will take questions. Investors expect the Market Strategy Committee to hold its benchmark interest rate steady in a range of 3.5%-3.75%.\n######################\nOutput:\n("entity"<|>CENTRAL INSTITUTION<|>ORGANIZATION<|>The Central Institution is the Federal Reserve of Verdantis, which is setting interest rates on Monday and Thursday)\n##\n("entity"<|>MARTIN SMITH<|>PERSON<|>Martin Smith is the chair of the Central Institution)\n##\n("entity"<|>MARKET STRATEGY COMMITTEE<|>ORGANIZATION<|>The Central Institution committee makes key decisions about interest rates and the growth of Verdantis\'s money supply)\n##\n("relationship"<|>MARTIN SMITH<|>CENTRAL INSTITUTION<|>Martin Smith is the Chair of the Central Institution and will answer questions at a press conference<|>9)\n<|COMPLETE|>\n\n######################\nExample 2:\nEntity_types: ORGANIZATION\nText:\nTechGlobal\'s (TG) stock skyrocketed in its opening day on the Global Exchange Thursday. But IPO experts warn that the semiconductor corporation\'s debut on the public markets isn\'t indicative of how other newly listed companies may perform.\n\nTechGlobal, a formerly public company, was taken private by Vision Holdings in 2014. The well-established chip designer says it powers 85% of premium smartphones.\n######################\nOutput:\n("entity"<|>TECHGLOBAL<|>ORGANIZATION<|>TechGlobal is a stock now listed on the Global Exchange which powers 85% of premium smartphones)\n##\n("entity"<|>VISION HOLDINGS<|>ORGANIZATION<|>Vision Holdings is a firm that previously owned TechGlobal)\n##\n("relationship"<|>TECHGLOBAL<|>VISION HOLDINGS<|>Vision Holdings formerly owned TechGlobal from 2014 until present<|>5)\n<|COMPLETE|>\n\n######################\nExample 3:\nEntity_types: ORGANIZATION,GEO,PERSON\nText:\nFive Aurelians jailed for 8 years in Firuzabad and widely regarded as hostages are on their way home to Aurelia.\n\nThe swap orchestrated by Quintara was finalized when $8bn of Firuzi funds were transferred to financial institutions in Krohaara, the capital of Quintara.\n\nThe exchange initiated in Firuzabad\'s capital, Tiruzia, led to the four men and one woman, who are also Firuzi nationals, boarding a chartered flight to Krohaara.\n\nThey were welcomed by senior Aurelian officials and are now on their way to Aurelia\'s capital, Cashion.\n\nThe Aurelians include 39-year-old businessman Samuel Namara, who has been held in Tiruzia\'s Alhamia Prison, as well as journalist Durke Bataglani, 59, and environmentalist Meggie Tazbah, 53, who also holds Bratinas nationality.\n######################\nOutput:\n("entity"<|>FIRUZABAD<|>GEO<|>Firuzabad held Aurelians as hostages)\n##\n("entity"<|>AURELIA<|>GEO<|>Country seeking to release hostages)\n##\n("entity"<|>QUINTARA<|>GEO<|>Country that negotiated a swap of money in exchange for hostages)\n##\n##\n("entity"<|>TIRUZIA<|>GEO<|>Capital of Firuzabad where the Aurelians were being held)\n##\n("entity"<|>KROHAARA<|>GEO<|>Capital city in Quintara)\n##\n("entity"<|>CASHION<|>GEO<|>Capital city in Aurelia)\n##\n("entity"<|>SAMUEL NAMARA<|>PERSON<|>Aurelian who spent time in Tiruzia\'s Alhamia Prison)\n##\n("entity"<|>ALHAMIA PRISON<|>GEO<|>Prison in Tiruzia)\n##\n("entity"<|>DURKE BATAGLANI<|>PERSON<|>Aurelian journalist who was held hostage)\n##\n("entity"<|>MEGGIE TAZBAH<|>PERSON<|>Bratinas national and environmentalist who was held hostage)\n##\n("relationship"<|>FIRUZABAD<|>AURELIA<|>Firuzabad negotiated a hostage exchange with Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>AURELIA<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>FIRUZABAD<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>ALHAMIA PRISON<|>Samuel Namara was a prisoner at Alhamia prison<|>8)\n##\n("relationship"<|>SAMUEL NAMARA<|>MEGGIE TAZBAH<|>Samuel Namara and Meggie Tazbah were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>DURKE BATAGLANI<|>Samuel Namara and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>DURKE BATAGLANI<|>Meggie Tazbah and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>FIRUZABAD<|>Samuel Namara was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>FIRUZABAD<|>Meggie Tazbah was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>DURKE BATAGLANI<|>FIRUZABAD<|>Durke Bataglani was a hostage in Firuzabad<|>2)\n<|COMPLETE|>\n\n######################\n-Real Data-\n######################\nEntity_types: organization,person,geo,event\nText: John Doe is the CEO of Acme Corp, a large technology company based in New York.\n######################\nOutput:'}
+10:33:37,181 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 502 Bad Gateway"
+10:33:37,183 graphrag.index.reporting.file_workflow_callbacks INFO Error Invoking LLM details={'input': '\n-Goal-\nGiven a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.\n \n-Steps-\n1. Identify all entities. For each identified entity, extract the following information:\n- entity_name: Name of the entity, capitalized\n- entity_type: One of the following types: [organization,person,geo,event]\n- entity_description: Comprehensive description of the entity\'s attributes and activities\nFormat each entity as ("entity"<|><entity_name><|><entity_type><|><entity_description>)\n \n2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.\nFor each pair of related entities, extract the following information:\n- source_entity: name of the source entity, as identified in step 1\n- target_entity: name of the target entity, as identified in step 1\n- relationship_description: explanation as to why you think the source entity and the target entity are related to each other\n- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity\n Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)\n \n3. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.\n \n4. When finished, output <|COMPLETE|>\n \n######################\n-Examples-\n######################\nExample 1:\nEntity_types: ORGANIZATION,PERSON\nText:\nThe Verdantis\'s Central Institution is scheduled to meet on Monday and Thursday, with the institution planning to release its latest policy decision on Thursday at 1:30 p.m. PDT, followed by a press conference where Central Institution Chair Martin Smith will take questions. Investors expect the Market Strategy Committee to hold its benchmark interest rate steady in a range of 3.5%-3.75%.\n######################\nOutput:\n("entity"<|>CENTRAL INSTITUTION<|>ORGANIZATION<|>The Central Institution is the Federal Reserve of Verdantis, which is setting interest rates on Monday and Thursday)\n##\n("entity"<|>MARTIN SMITH<|>PERSON<|>Martin Smith is the chair of the Central Institution)\n##\n("entity"<|>MARKET STRATEGY COMMITTEE<|>ORGANIZATION<|>The Central Institution committee makes key decisions about interest rates and the growth of Verdantis\'s money supply)\n##\n("relationship"<|>MARTIN SMITH<|>CENTRAL INSTITUTION<|>Martin Smith is the Chair of the Central Institution and will answer questions at a press conference<|>9)\n<|COMPLETE|>\n\n######################\nExample 2:\nEntity_types: ORGANIZATION\nText:\nTechGlobal\'s (TG) stock skyrocketed in its opening day on the Global Exchange Thursday. But IPO experts warn that the semiconductor corporation\'s debut on the public markets isn\'t indicative of how other newly listed companies may perform.\n\nTechGlobal, a formerly public company, was taken private by Vision Holdings in 2014. The well-established chip designer says it powers 85% of premium smartphones.\n######################\nOutput:\n("entity"<|>TECHGLOBAL<|>ORGANIZATION<|>TechGlobal is a stock now listed on the Global Exchange which powers 85% of premium smartphones)\n##\n("entity"<|>VISION HOLDINGS<|>ORGANIZATION<|>Vision Holdings is a firm that previously owned TechGlobal)\n##\n("relationship"<|>TECHGLOBAL<|>VISION HOLDINGS<|>Vision Holdings formerly owned TechGlobal from 2014 until present<|>5)\n<|COMPLETE|>\n\n######################\nExample 3:\nEntity_types: ORGANIZATION,GEO,PERSON\nText:\nFive Aurelians jailed for 8 years in Firuzabad and widely regarded as hostages are on their way home to Aurelia.\n\nThe swap orchestrated by Quintara was finalized when $8bn of Firuzi funds were transferred to financial institutions in Krohaara, the capital of Quintara.\n\nThe exchange initiated in Firuzabad\'s capital, Tiruzia, led to the four men and one woman, who are also Firuzi nationals, boarding a chartered flight to Krohaara.\n\nThey were welcomed by senior Aurelian officials and are now on their way to Aurelia\'s capital, Cashion.\n\nThe Aurelians include 39-year-old businessman Samuel Namara, who has been held in Tiruzia\'s Alhamia Prison, as well as journalist Durke Bataglani, 59, and environmentalist Meggie Tazbah, 53, who also holds Bratinas nationality.\n######################\nOutput:\n("entity"<|>FIRUZABAD<|>GEO<|>Firuzabad held Aurelians as hostages)\n##\n("entity"<|>AURELIA<|>GEO<|>Country seeking to release hostages)\n##\n("entity"<|>QUINTARA<|>GEO<|>Country that negotiated a swap of money in exchange for hostages)\n##\n##\n("entity"<|>TIRUZIA<|>GEO<|>Capital of Firuzabad where the Aurelians were being held)\n##\n("entity"<|>KROHAARA<|>GEO<|>Capital city in Quintara)\n##\n("entity"<|>CASHION<|>GEO<|>Capital city in Aurelia)\n##\n("entity"<|>SAMUEL NAMARA<|>PERSON<|>Aurelian who spent time in Tiruzia\'s Alhamia Prison)\n##\n("entity"<|>ALHAMIA PRISON<|>GEO<|>Prison in Tiruzia)\n##\n("entity"<|>DURKE BATAGLANI<|>PERSON<|>Aurelian journalist who was held hostage)\n##\n("entity"<|>MEGGIE TAZBAH<|>PERSON<|>Bratinas national and environmentalist who was held hostage)\n##\n("relationship"<|>FIRUZABAD<|>AURELIA<|>Firuzabad negotiated a hostage exchange with Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>AURELIA<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>FIRUZABAD<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>ALHAMIA PRISON<|>Samuel Namara was a prisoner at Alhamia prison<|>8)\n##\n("relationship"<|>SAMUEL NAMARA<|>MEGGIE TAZBAH<|>Samuel Namara and Meggie Tazbah were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>DURKE BATAGLANI<|>Samuel Namara and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>DURKE BATAGLANI<|>Meggie Tazbah and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>FIRUZABAD<|>Samuel Namara was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>FIRUZABAD<|>Meggie Tazbah was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>DURKE BATAGLANI<|>FIRUZABAD<|>Durke Bataglani was a hostage in Firuzabad<|>2)\n<|COMPLETE|>\n\n######################\n-Real Data-\n######################\nEntity_types: organization,person,geo,event\nText: John Doe is the CEO of Acme Corp, a large technology company based in New York.\n######################\nOutput:'}
+10:33:43,622 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 502 Bad Gateway"
+10:33:43,623 graphrag.index.reporting.file_workflow_callbacks INFO Error Invoking LLM details={'input': '\n-Goal-\nGiven a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.\n \n-Steps-\n1. Identify all entities. For each identified entity, extract the following information:\n- entity_name: Name of the entity, capitalized\n- entity_type: One of the following types: [organization,person,geo,event]\n- entity_description: Comprehensive description of the entity\'s attributes and activities\nFormat each entity as ("entity"<|><entity_name><|><entity_type><|><entity_description>)\n \n2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.\nFor each pair of related entities, extract the following information:\n- source_entity: name of the source entity, as identified in step 1\n- target_entity: name of the target entity, as identified in step 1\n- relationship_description: explanation as to why you think the source entity and the target entity are related to each other\n- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity\n Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)\n \n3. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.\n \n4. When finished, output <|COMPLETE|>\n \n######################\n-Examples-\n######################\nExample 1:\nEntity_types: ORGANIZATION,PERSON\nText:\nThe Verdantis\'s Central Institution is scheduled to meet on Monday and Thursday, with the institution planning to release its latest policy decision on Thursday at 1:30 p.m. PDT, followed by a press conference where Central Institution Chair Martin Smith will take questions. Investors expect the Market Strategy Committee to hold its benchmark interest rate steady in a range of 3.5%-3.75%.\n######################\nOutput:\n("entity"<|>CENTRAL INSTITUTION<|>ORGANIZATION<|>The Central Institution is the Federal Reserve of Verdantis, which is setting interest rates on Monday and Thursday)\n##\n("entity"<|>MARTIN SMITH<|>PERSON<|>Martin Smith is the chair of the Central Institution)\n##\n("entity"<|>MARKET STRATEGY COMMITTEE<|>ORGANIZATION<|>The Central Institution committee makes key decisions about interest rates and the growth of Verdantis\'s money supply)\n##\n("relationship"<|>MARTIN SMITH<|>CENTRAL INSTITUTION<|>Martin Smith is the Chair of the Central Institution and will answer questions at a press conference<|>9)\n<|COMPLETE|>\n\n######################\nExample 2:\nEntity_types: ORGANIZATION\nText:\nTechGlobal\'s (TG) stock skyrocketed in its opening day on the Global Exchange Thursday. But IPO experts warn that the semiconductor corporation\'s debut on the public markets isn\'t indicative of how other newly listed companies may perform.\n\nTechGlobal, a formerly public company, was taken private by Vision Holdings in 2014. The well-established chip designer says it powers 85% of premium smartphones.\n######################\nOutput:\n("entity"<|>TECHGLOBAL<|>ORGANIZATION<|>TechGlobal is a stock now listed on the Global Exchange which powers 85% of premium smartphones)\n##\n("entity"<|>VISION HOLDINGS<|>ORGANIZATION<|>Vision Holdings is a firm that previously owned TechGlobal)\n##\n("relationship"<|>TECHGLOBAL<|>VISION HOLDINGS<|>Vision Holdings formerly owned TechGlobal from 2014 until present<|>5)\n<|COMPLETE|>\n\n######################\nExample 3:\nEntity_types: ORGANIZATION,GEO,PERSON\nText:\nFive Aurelians jailed for 8 years in Firuzabad and widely regarded as hostages are on their way home to Aurelia.\n\nThe swap orchestrated by Quintara was finalized when $8bn of Firuzi funds were transferred to financial institutions in Krohaara, the capital of Quintara.\n\nThe exchange initiated in Firuzabad\'s capital, Tiruzia, led to the four men and one woman, who are also Firuzi nationals, boarding a chartered flight to Krohaara.\n\nThey were welcomed by senior Aurelian officials and are now on their way to Aurelia\'s capital, Cashion.\n\nThe Aurelians include 39-year-old businessman Samuel Namara, who has been held in Tiruzia\'s Alhamia Prison, as well as journalist Durke Bataglani, 59, and environmentalist Meggie Tazbah, 53, who also holds Bratinas nationality.\n######################\nOutput:\n("entity"<|>FIRUZABAD<|>GEO<|>Firuzabad held Aurelians as hostages)\n##\n("entity"<|>AURELIA<|>GEO<|>Country seeking to release hostages)\n##\n("entity"<|>QUINTARA<|>GEO<|>Country that negotiated a swap of money in exchange for hostages)\n##\n##\n("entity"<|>TIRUZIA<|>GEO<|>Capital of Firuzabad where the Aurelians were being held)\n##\n("entity"<|>KROHAARA<|>GEO<|>Capital city in Quintara)\n##\n("entity"<|>CASHION<|>GEO<|>Capital city in Aurelia)\n##\n("entity"<|>SAMUEL NAMARA<|>PERSON<|>Aurelian who spent time in Tiruzia\'s Alhamia Prison)\n##\n("entity"<|>ALHAMIA PRISON<|>GEO<|>Prison in Tiruzia)\n##\n("entity"<|>DURKE BATAGLANI<|>PERSON<|>Aurelian journalist who was held hostage)\n##\n("entity"<|>MEGGIE TAZBAH<|>PERSON<|>Bratinas national and environmentalist who was held hostage)\n##\n("relationship"<|>FIRUZABAD<|>AURELIA<|>Firuzabad negotiated a hostage exchange with Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>AURELIA<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>FIRUZABAD<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>ALHAMIA PRISON<|>Samuel Namara was a prisoner at Alhamia prison<|>8)\n##\n("relationship"<|>SAMUEL NAMARA<|>MEGGIE TAZBAH<|>Samuel Namara and Meggie Tazbah were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>DURKE BATAGLANI<|>Samuel Namara and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>DURKE BATAGLANI<|>Meggie Tazbah and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>FIRUZABAD<|>Samuel Namara was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>FIRUZABAD<|>Meggie Tazbah was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>DURKE BATAGLANI<|>FIRUZABAD<|>Durke Bataglani was a hostage in Firuzabad<|>2)\n<|COMPLETE|>\n\n######################\n-Real Data-\n######################\nEntity_types: organization,person,geo,event\nText: John Doe is the CEO of Acme Corp, a large technology company based in New York.\n######################\nOutput:'}
+10:33:51,218 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 502 Bad Gateway"
+10:33:51,219 graphrag.index.reporting.file_workflow_callbacks INFO Error Invoking LLM details={'input': '\n-Goal-\nGiven a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.\n \n-Steps-\n1. Identify all entities. For each identified entity, extract the following information:\n- entity_name: Name of the entity, capitalized\n- entity_type: One of the following types: [organization,person,geo,event]\n- entity_description: Comprehensive description of the entity\'s attributes and activities\nFormat each entity as ("entity"<|><entity_name><|><entity_type><|><entity_description>)\n \n2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.\nFor each pair of related entities, extract the following information:\n- source_entity: name of the source entity, as identified in step 1\n- target_entity: name of the target entity, as identified in step 1\n- relationship_description: explanation as to why you think the source entity and the target entity are related to each other\n- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity\n Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)\n \n3. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.\n \n4. When finished, output <|COMPLETE|>\n \n######################\n-Examples-\n######################\nExample 1:\nEntity_types: ORGANIZATION,PERSON\nText:\nThe Verdantis\'s Central Institution is scheduled to meet on Monday and Thursday, with the institution planning to release its latest policy decision on Thursday at 1:30 p.m. PDT, followed by a press conference where Central Institution Chair Martin Smith will take questions. Investors expect the Market Strategy Committee to hold its benchmark interest rate steady in a range of 3.5%-3.75%.\n######################\nOutput:\n("entity"<|>CENTRAL INSTITUTION<|>ORGANIZATION<|>The Central Institution is the Federal Reserve of Verdantis, which is setting interest rates on Monday and Thursday)\n##\n("entity"<|>MARTIN SMITH<|>PERSON<|>Martin Smith is the chair of the Central Institution)\n##\n("entity"<|>MARKET STRATEGY COMMITTEE<|>ORGANIZATION<|>The Central Institution committee makes key decisions about interest rates and the growth of Verdantis\'s money supply)\n##\n("relationship"<|>MARTIN SMITH<|>CENTRAL INSTITUTION<|>Martin Smith is the Chair of the Central Institution and will answer questions at a press conference<|>9)\n<|COMPLETE|>\n\n######################\nExample 2:\nEntity_types: ORGANIZATION\nText:\nTechGlobal\'s (TG) stock skyrocketed in its opening day on the Global Exchange Thursday. But IPO experts warn that the semiconductor corporation\'s debut on the public markets isn\'t indicative of how other newly listed companies may perform.\n\nTechGlobal, a formerly public company, was taken private by Vision Holdings in 2014. The well-established chip designer says it powers 85% of premium smartphones.\n######################\nOutput:\n("entity"<|>TECHGLOBAL<|>ORGANIZATION<|>TechGlobal is a stock now listed on the Global Exchange which powers 85% of premium smartphones)\n##\n("entity"<|>VISION HOLDINGS<|>ORGANIZATION<|>Vision Holdings is a firm that previously owned TechGlobal)\n##\n("relationship"<|>TECHGLOBAL<|>VISION HOLDINGS<|>Vision Holdings formerly owned TechGlobal from 2014 until present<|>5)\n<|COMPLETE|>\n\n######################\nExample 3:\nEntity_types: ORGANIZATION,GEO,PERSON\nText:\nFive Aurelians jailed for 8 years in Firuzabad and widely regarded as hostages are on their way home to Aurelia.\n\nThe swap orchestrated by Quintara was finalized when $8bn of Firuzi funds were transferred to financial institutions in Krohaara, the capital of Quintara.\n\nThe exchange initiated in Firuzabad\'s capital, Tiruzia, led to the four men and one woman, who are also Firuzi nationals, boarding a chartered flight to Krohaara.\n\nThey were welcomed by senior Aurelian officials and are now on their way to Aurelia\'s capital, Cashion.\n\nThe Aurelians include 39-year-old businessman Samuel Namara, who has been held in Tiruzia\'s Alhamia Prison, as well as journalist Durke Bataglani, 59, and environmentalist Meggie Tazbah, 53, who also holds Bratinas nationality.\n######################\nOutput:\n("entity"<|>FIRUZABAD<|>GEO<|>Firuzabad held Aurelians as hostages)\n##\n("entity"<|>AURELIA<|>GEO<|>Country seeking to release hostages)\n##\n("entity"<|>QUINTARA<|>GEO<|>Country that negotiated a swap of money in exchange for hostages)\n##\n##\n("entity"<|>TIRUZIA<|>GEO<|>Capital of Firuzabad where the Aurelians were being held)\n##\n("entity"<|>KROHAARA<|>GEO<|>Capital city in Quintara)\n##\n("entity"<|>CASHION<|>GEO<|>Capital city in Aurelia)\n##\n("entity"<|>SAMUEL NAMARA<|>PERSON<|>Aurelian who spent time in Tiruzia\'s Alhamia Prison)\n##\n("entity"<|>ALHAMIA PRISON<|>GEO<|>Prison in Tiruzia)\n##\n("entity"<|>DURKE BATAGLANI<|>PERSON<|>Aurelian journalist who was held hostage)\n##\n("entity"<|>MEGGIE TAZBAH<|>PERSON<|>Bratinas national and environmentalist who was held hostage)\n##\n("relationship"<|>FIRUZABAD<|>AURELIA<|>Firuzabad negotiated a hostage exchange with Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>AURELIA<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>FIRUZABAD<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>ALHAMIA PRISON<|>Samuel Namara was a prisoner at Alhamia prison<|>8)\n##\n("relationship"<|>SAMUEL NAMARA<|>MEGGIE TAZBAH<|>Samuel Namara and Meggie Tazbah were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>DURKE BATAGLANI<|>Samuel Namara and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>DURKE BATAGLANI<|>Meggie Tazbah and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>FIRUZABAD<|>Samuel Namara was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>FIRUZABAD<|>Meggie Tazbah was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>DURKE BATAGLANI<|>FIRUZABAD<|>Durke Bataglani was a hostage in Firuzabad<|>2)\n<|COMPLETE|>\n\n######################\n-Real Data-\n######################\nEntity_types: organization,person,geo,event\nText: John Doe is the CEO of Acme Corp, a large technology company based in New York.\n######################\nOutput:'}
+10:34:02,250 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 502 Bad Gateway"
+10:34:02,251 graphrag.index.reporting.file_workflow_callbacks INFO Error Invoking LLM details={'input': '\n-Goal-\nGiven a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.\n \n-Steps-\n1. Identify all entities. For each identified entity, extract the following information:\n- entity_name: Name of the entity, capitalized\n- entity_type: One of the following types: [organization,person,geo,event]\n- entity_description: Comprehensive description of the entity\'s attributes and activities\nFormat each entity as ("entity"<|><entity_name><|><entity_type><|><entity_description>)\n \n2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.\nFor each pair of related entities, extract the following information:\n- source_entity: name of the source entity, as identified in step 1\n- target_entity: name of the target entity, as identified in step 1\n- relationship_description: explanation as to why you think the source entity and the target entity are related to each other\n- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity\n Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)\n \n3. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.\n \n4. When finished, output <|COMPLETE|>\n \n######################\n-Examples-\n######################\nExample 1:\nEntity_types: ORGANIZATION,PERSON\nText:\nThe Verdantis\'s Central Institution is scheduled to meet on Monday and Thursday, with the institution planning to release its latest policy decision on Thursday at 1:30 p.m. PDT, followed by a press conference where Central Institution Chair Martin Smith will take questions. Investors expect the Market Strategy Committee to hold its benchmark interest rate steady in a range of 3.5%-3.75%.\n######################\nOutput:\n("entity"<|>CENTRAL INSTITUTION<|>ORGANIZATION<|>The Central Institution is the Federal Reserve of Verdantis, which is setting interest rates on Monday and Thursday)\n##\n("entity"<|>MARTIN SMITH<|>PERSON<|>Martin Smith is the chair of the Central Institution)\n##\n("entity"<|>MARKET STRATEGY COMMITTEE<|>ORGANIZATION<|>The Central Institution committee makes key decisions about interest rates and the growth of Verdantis\'s money supply)\n##\n("relationship"<|>MARTIN SMITH<|>CENTRAL INSTITUTION<|>Martin Smith is the Chair of the Central Institution and will answer questions at a press conference<|>9)\n<|COMPLETE|>\n\n######################\nExample 2:\nEntity_types: ORGANIZATION\nText:\nTechGlobal\'s (TG) stock skyrocketed in its opening day on the Global Exchange Thursday. But IPO experts warn that the semiconductor corporation\'s debut on the public markets isn\'t indicative of how other newly listed companies may perform.\n\nTechGlobal, a formerly public company, was taken private by Vision Holdings in 2014. The well-established chip designer says it powers 85% of premium smartphones.\n######################\nOutput:\n("entity"<|>TECHGLOBAL<|>ORGANIZATION<|>TechGlobal is a stock now listed on the Global Exchange which powers 85% of premium smartphones)\n##\n("entity"<|>VISION HOLDINGS<|>ORGANIZATION<|>Vision Holdings is a firm that previously owned TechGlobal)\n##\n("relationship"<|>TECHGLOBAL<|>VISION HOLDINGS<|>Vision Holdings formerly owned TechGlobal from 2014 until present<|>5)\n<|COMPLETE|>\n\n######################\nExample 3:\nEntity_types: ORGANIZATION,GEO,PERSON\nText:\nFive Aurelians jailed for 8 years in Firuzabad and widely regarded as hostages are on their way home to Aurelia.\n\nThe swap orchestrated by Quintara was finalized when $8bn of Firuzi funds were transferred to financial institutions in Krohaara, the capital of Quintara.\n\nThe exchange initiated in Firuzabad\'s capital, Tiruzia, led to the four men and one woman, who are also Firuzi nationals, boarding a chartered flight to Krohaara.\n\nThey were welcomed by senior Aurelian officials and are now on their way to Aurelia\'s capital, Cashion.\n\nThe Aurelians include 39-year-old businessman Samuel Namara, who has been held in Tiruzia\'s Alhamia Prison, as well as journalist Durke Bataglani, 59, and environmentalist Meggie Tazbah, 53, who also holds Bratinas nationality.\n######################\nOutput:\n("entity"<|>FIRUZABAD<|>GEO<|>Firuzabad held Aurelians as hostages)\n##\n("entity"<|>AURELIA<|>GEO<|>Country seeking to release hostages)\n##\n("entity"<|>QUINTARA<|>GEO<|>Country that negotiated a swap of money in exchange for hostages)\n##\n##\n("entity"<|>TIRUZIA<|>GEO<|>Capital of Firuzabad where the Aurelians were being held)\n##\n("entity"<|>KROHAARA<|>GEO<|>Capital city in Quintara)\n##\n("entity"<|>CASHION<|>GEO<|>Capital city in Aurelia)\n##\n("entity"<|>SAMUEL NAMARA<|>PERSON<|>Aurelian who spent time in Tiruzia\'s Alhamia Prison)\n##\n("entity"<|>ALHAMIA PRISON<|>GEO<|>Prison in Tiruzia)\n##\n("entity"<|>DURKE BATAGLANI<|>PERSON<|>Aurelian journalist who was held hostage)\n##\n("entity"<|>MEGGIE TAZBAH<|>PERSON<|>Bratinas national and environmentalist who was held hostage)\n##\n("relationship"<|>FIRUZABAD<|>AURELIA<|>Firuzabad negotiated a hostage exchange with Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>AURELIA<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>FIRUZABAD<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>ALHAMIA PRISON<|>Samuel Namara was a prisoner at Alhamia prison<|>8)\n##\n("relationship"<|>SAMUEL NAMARA<|>MEGGIE TAZBAH<|>Samuel Namara and Meggie Tazbah were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>DURKE BATAGLANI<|>Samuel Namara and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>DURKE BATAGLANI<|>Meggie Tazbah and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>FIRUZABAD<|>Samuel Namara was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>FIRUZABAD<|>Meggie Tazbah was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>DURKE BATAGLANI<|>FIRUZABAD<|>Durke Bataglani was a hostage in Firuzabad<|>2)\n<|COMPLETE|>\n\n######################\n-Real Data-\n######################\nEntity_types: organization,person,geo,event\nText: John Doe is the CEO of Acme Corp, a large technology company based in New York.\n######################\nOutput:'}
+10:34:15,914 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 502 Bad Gateway"
+10:34:15,915 graphrag.index.reporting.file_workflow_callbacks INFO Error Invoking LLM details={'input': '\n-Goal-\nGiven a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.\n \n-Steps-\n1. Identify all entities. For each identified entity, extract the following information:\n- entity_name: Name of the entity, capitalized\n- entity_type: One of the following types: [organization,person,geo,event]\n- entity_description: Comprehensive description of the entity\'s attributes and activities\nFormat each entity as ("entity"<|><entity_name><|><entity_type><|><entity_description>)\n \n2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.\nFor each pair of related entities, extract the following information:\n- source_entity: name of the source entity, as identified in step 1\n- target_entity: name of the target entity, as identified in step 1\n- relationship_description: explanation as to why you think the source entity and the target entity are related to each other\n- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity\n Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)\n \n3. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.\n \n4. When finished, output <|COMPLETE|>\n \n######################\n-Examples-\n######################\nExample 1:\nEntity_types: ORGANIZATION,PERSON\nText:\nThe Verdantis\'s Central Institution is scheduled to meet on Monday and Thursday, with the institution planning to release its latest policy decision on Thursday at 1:30 p.m. PDT, followed by a press conference where Central Institution Chair Martin Smith will take questions. Investors expect the Market Strategy Committee to hold its benchmark interest rate steady in a range of 3.5%-3.75%.\n######################\nOutput:\n("entity"<|>CENTRAL INSTITUTION<|>ORGANIZATION<|>The Central Institution is the Federal Reserve of Verdantis, which is setting interest rates on Monday and Thursday)\n##\n("entity"<|>MARTIN SMITH<|>PERSON<|>Martin Smith is the chair of the Central Institution)\n##\n("entity"<|>MARKET STRATEGY COMMITTEE<|>ORGANIZATION<|>The Central Institution committee makes key decisions about interest rates and the growth of Verdantis\'s money supply)\n##\n("relationship"<|>MARTIN SMITH<|>CENTRAL INSTITUTION<|>Martin Smith is the Chair of the Central Institution and will answer questions at a press conference<|>9)\n<|COMPLETE|>\n\n######################\nExample 2:\nEntity_types: ORGANIZATION\nText:\nTechGlobal\'s (TG) stock skyrocketed in its opening day on the Global Exchange Thursday. But IPO experts warn that the semiconductor corporation\'s debut on the public markets isn\'t indicative of how other newly listed companies may perform.\n\nTechGlobal, a formerly public company, was taken private by Vision Holdings in 2014. The well-established chip designer says it powers 85% of premium smartphones.\n######################\nOutput:\n("entity"<|>TECHGLOBAL<|>ORGANIZATION<|>TechGlobal is a stock now listed on the Global Exchange which powers 85% of premium smartphones)\n##\n("entity"<|>VISION HOLDINGS<|>ORGANIZATION<|>Vision Holdings is a firm that previously owned TechGlobal)\n##\n("relationship"<|>TECHGLOBAL<|>VISION HOLDINGS<|>Vision Holdings formerly owned TechGlobal from 2014 until present<|>5)\n<|COMPLETE|>\n\n######################\nExample 3:\nEntity_types: ORGANIZATION,GEO,PERSON\nText:\nFive Aurelians jailed for 8 years in Firuzabad and widely regarded as hostages are on their way home to Aurelia.\n\nThe swap orchestrated by Quintara was finalized when $8bn of Firuzi funds were transferred to financial institutions in Krohaara, the capital of Quintara.\n\nThe exchange initiated in Firuzabad\'s capital, Tiruzia, led to the four men and one woman, who are also Firuzi nationals, boarding a chartered flight to Krohaara.\n\nThey were welcomed by senior Aurelian officials and are now on their way to Aurelia\'s capital, Cashion.\n\nThe Aurelians include 39-year-old businessman Samuel Namara, who has been held in Tiruzia\'s Alhamia Prison, as well as journalist Durke Bataglani, 59, and environmentalist Meggie Tazbah, 53, who also holds Bratinas nationality.\n######################\nOutput:\n("entity"<|>FIRUZABAD<|>GEO<|>Firuzabad held Aurelians as hostages)\n##\n("entity"<|>AURELIA<|>GEO<|>Country seeking to release hostages)\n##\n("entity"<|>QUINTARA<|>GEO<|>Country that negotiated a swap of money in exchange for hostages)\n##\n##\n("entity"<|>TIRUZIA<|>GEO<|>Capital of Firuzabad where the Aurelians were being held)\n##\n("entity"<|>KROHAARA<|>GEO<|>Capital city in Quintara)\n##\n("entity"<|>CASHION<|>GEO<|>Capital city in Aurelia)\n##\n("entity"<|>SAMUEL NAMARA<|>PERSON<|>Aurelian who spent time in Tiruzia\'s Alhamia Prison)\n##\n("entity"<|>ALHAMIA PRISON<|>GEO<|>Prison in Tiruzia)\n##\n("entity"<|>DURKE BATAGLANI<|>PERSON<|>Aurelian journalist who was held hostage)\n##\n("entity"<|>MEGGIE TAZBAH<|>PERSON<|>Bratinas national and environmentalist who was held hostage)\n##\n("relationship"<|>FIRUZABAD<|>AURELIA<|>Firuzabad negotiated a hostage exchange with Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>AURELIA<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>FIRUZABAD<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>ALHAMIA PRISON<|>Samuel Namara was a prisoner at Alhamia prison<|>8)\n##\n("relationship"<|>SAMUEL NAMARA<|>MEGGIE TAZBAH<|>Samuel Namara and Meggie Tazbah were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>DURKE BATAGLANI<|>Samuel Namara and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>DURKE BATAGLANI<|>Meggie Tazbah and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>FIRUZABAD<|>Samuel Namara was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>FIRUZABAD<|>Meggie Tazbah was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>DURKE BATAGLANI<|>FIRUZABAD<|>Durke Bataglani was a hostage in Firuzabad<|>2)\n<|COMPLETE|>\n\n######################\n-Real Data-\n######################\nEntity_types: organization,person,geo,event\nText: John Doe is the CEO of Acme Corp, a large technology company based in New York.\n######################\nOutput:'}
+10:34:29,337 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 502 Bad Gateway"
+10:34:29,338 graphrag.index.reporting.file_workflow_callbacks INFO Error Invoking LLM details={'input': '\n-Goal-\nGiven a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.\n \n-Steps-\n1. Identify all entities. For each identified entity, extract the following information:\n- entity_name: Name of the entity, capitalized\n- entity_type: One of the following types: [organization,person,geo,event]\n- entity_description: Comprehensive description of the entity\'s attributes and activities\nFormat each entity as ("entity"<|><entity_name><|><entity_type><|><entity_description>)\n \n2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.\nFor each pair of related entities, extract the following information:\n- source_entity: name of the source entity, as identified in step 1\n- target_entity: name of the target entity, as identified in step 1\n- relationship_description: explanation as to why you think the source entity and the target entity are related to each other\n- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity\n Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)\n \n3. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.\n \n4. When finished, output <|COMPLETE|>\n \n######################\n-Examples-\n######################\nExample 1:\nEntity_types: ORGANIZATION,PERSON\nText:\nThe Verdantis\'s Central Institution is scheduled to meet on Monday and Thursday, with the institution planning to release its latest policy decision on Thursday at 1:30 p.m. PDT, followed by a press conference where Central Institution Chair Martin Smith will take questions. Investors expect the Market Strategy Committee to hold its benchmark interest rate steady in a range of 3.5%-3.75%.\n######################\nOutput:\n("entity"<|>CENTRAL INSTITUTION<|>ORGANIZATION<|>The Central Institution is the Federal Reserve of Verdantis, which is setting interest rates on Monday and Thursday)\n##\n("entity"<|>MARTIN SMITH<|>PERSON<|>Martin Smith is the chair of the Central Institution)\n##\n("entity"<|>MARKET STRATEGY COMMITTEE<|>ORGANIZATION<|>The Central Institution committee makes key decisions about interest rates and the growth of Verdantis\'s money supply)\n##\n("relationship"<|>MARTIN SMITH<|>CENTRAL INSTITUTION<|>Martin Smith is the Chair of the Central Institution and will answer questions at a press conference<|>9)\n<|COMPLETE|>\n\n######################\nExample 2:\nEntity_types: ORGANIZATION\nText:\nTechGlobal\'s (TG) stock skyrocketed in its opening day on the Global Exchange Thursday. But IPO experts warn that the semiconductor corporation\'s debut on the public markets isn\'t indicative of how other newly listed companies may perform.\n\nTechGlobal, a formerly public company, was taken private by Vision Holdings in 2014. The well-established chip designer says it powers 85% of premium smartphones.\n######################\nOutput:\n("entity"<|>TECHGLOBAL<|>ORGANIZATION<|>TechGlobal is a stock now listed on the Global Exchange which powers 85% of premium smartphones)\n##\n("entity"<|>VISION HOLDINGS<|>ORGANIZATION<|>Vision Holdings is a firm that previously owned TechGlobal)\n##\n("relationship"<|>TECHGLOBAL<|>VISION HOLDINGS<|>Vision Holdings formerly owned TechGlobal from 2014 until present<|>5)\n<|COMPLETE|>\n\n######################\nExample 3:\nEntity_types: ORGANIZATION,GEO,PERSON\nText:\nFive Aurelians jailed for 8 years in Firuzabad and widely regarded as hostages are on their way home to Aurelia.\n\nThe swap orchestrated by Quintara was finalized when $8bn of Firuzi funds were transferred to financial institutions in Krohaara, the capital of Quintara.\n\nThe exchange initiated in Firuzabad\'s capital, Tiruzia, led to the four men and one woman, who are also Firuzi nationals, boarding a chartered flight to Krohaara.\n\nThey were welcomed by senior Aurelian officials and are now on their way to Aurelia\'s capital, Cashion.\n\nThe Aurelians include 39-year-old businessman Samuel Namara, who has been held in Tiruzia\'s Alhamia Prison, as well as journalist Durke Bataglani, 59, and environmentalist Meggie Tazbah, 53, who also holds Bratinas nationality.\n######################\nOutput:\n("entity"<|>FIRUZABAD<|>GEO<|>Firuzabad held Aurelians as hostages)\n##\n("entity"<|>AURELIA<|>GEO<|>Country seeking to release hostages)\n##\n("entity"<|>QUINTARA<|>GEO<|>Country that negotiated a swap of money in exchange for hostages)\n##\n##\n("entity"<|>TIRUZIA<|>GEO<|>Capital of Firuzabad where the Aurelians were being held)\n##\n("entity"<|>KROHAARA<|>GEO<|>Capital city in Quintara)\n##\n("entity"<|>CASHION<|>GEO<|>Capital city in Aurelia)\n##\n("entity"<|>SAMUEL NAMARA<|>PERSON<|>Aurelian who spent time in Tiruzia\'s Alhamia Prison)\n##\n("entity"<|>ALHAMIA PRISON<|>GEO<|>Prison in Tiruzia)\n##\n("entity"<|>DURKE BATAGLANI<|>PERSON<|>Aurelian journalist who was held hostage)\n##\n("entity"<|>MEGGIE TAZBAH<|>PERSON<|>Bratinas national and environmentalist who was held hostage)\n##\n("relationship"<|>FIRUZABAD<|>AURELIA<|>Firuzabad negotiated a hostage exchange with Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>AURELIA<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>FIRUZABAD<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>ALHAMIA PRISON<|>Samuel Namara was a prisoner at Alhamia prison<|>8)\n##\n("relationship"<|>SAMUEL NAMARA<|>MEGGIE TAZBAH<|>Samuel Namara and Meggie Tazbah were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>DURKE BATAGLANI<|>Samuel Namara and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>DURKE BATAGLANI<|>Meggie Tazbah and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>FIRUZABAD<|>Samuel Namara was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>FIRUZABAD<|>Meggie Tazbah was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>DURKE BATAGLANI<|>FIRUZABAD<|>Durke Bataglani was a hostage in Firuzabad<|>2)\n<|COMPLETE|>\n\n######################\n-Real Data-\n######################\nEntity_types: organization,person,geo,event\nText: John Doe is the CEO of Acme Corp, a large technology company based in New York.\n######################\nOutput:'}
+10:34:42,944 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 502 Bad Gateway"
+10:34:42,945 graphrag.index.reporting.file_workflow_callbacks INFO Error Invoking LLM details={'input': '\n-Goal-\nGiven a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.\n \n-Steps-\n1. Identify all entities. For each identified entity, extract the following information:\n- entity_name: Name of the entity, capitalized\n- entity_type: One of the following types: [organization,person,geo,event]\n- entity_description: Comprehensive description of the entity\'s attributes and activities\nFormat each entity as ("entity"<|><entity_name><|><entity_type><|><entity_description>)\n \n2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.\nFor each pair of related entities, extract the following information:\n- source_entity: name of the source entity, as identified in step 1\n- target_entity: name of the target entity, as identified in step 1\n- relationship_description: explanation as to why you think the source entity and the target entity are related to each other\n- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity\n Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)\n \n3. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.\n \n4. When finished, output <|COMPLETE|>\n \n######################\n-Examples-\n######################\nExample 1:\nEntity_types: ORGANIZATION,PERSON\nText:\nThe Verdantis\'s Central Institution is scheduled to meet on Monday and Thursday, with the institution planning to release its latest policy decision on Thursday at 1:30 p.m. PDT, followed by a press conference where Central Institution Chair Martin Smith will take questions. Investors expect the Market Strategy Committee to hold its benchmark interest rate steady in a range of 3.5%-3.75%.\n######################\nOutput:\n("entity"<|>CENTRAL INSTITUTION<|>ORGANIZATION<|>The Central Institution is the Federal Reserve of Verdantis, which is setting interest rates on Monday and Thursday)\n##\n("entity"<|>MARTIN SMITH<|>PERSON<|>Martin Smith is the chair of the Central Institution)\n##\n("entity"<|>MARKET STRATEGY COMMITTEE<|>ORGANIZATION<|>The Central Institution committee makes key decisions about interest rates and the growth of Verdantis\'s money supply)\n##\n("relationship"<|>MARTIN SMITH<|>CENTRAL INSTITUTION<|>Martin Smith is the Chair of the Central Institution and will answer questions at a press conference<|>9)\n<|COMPLETE|>\n\n######################\nExample 2:\nEntity_types: ORGANIZATION\nText:\nTechGlobal\'s (TG) stock skyrocketed in its opening day on the Global Exchange Thursday. But IPO experts warn that the semiconductor corporation\'s debut on the public markets isn\'t indicative of how other newly listed companies may perform.\n\nTechGlobal, a formerly public company, was taken private by Vision Holdings in 2014. The well-established chip designer says it powers 85% of premium smartphones.\n######################\nOutput:\n("entity"<|>TECHGLOBAL<|>ORGANIZATION<|>TechGlobal is a stock now listed on the Global Exchange which powers 85% of premium smartphones)\n##\n("entity"<|>VISION HOLDINGS<|>ORGANIZATION<|>Vision Holdings is a firm that previously owned TechGlobal)\n##\n("relationship"<|>TECHGLOBAL<|>VISION HOLDINGS<|>Vision Holdings formerly owned TechGlobal from 2014 until present<|>5)\n<|COMPLETE|>\n\n######################\nExample 3:\nEntity_types: ORGANIZATION,GEO,PERSON\nText:\nFive Aurelians jailed for 8 years in Firuzabad and widely regarded as hostages are on their way home to Aurelia.\n\nThe swap orchestrated by Quintara was finalized when $8bn of Firuzi funds were transferred to financial institutions in Krohaara, the capital of Quintara.\n\nThe exchange initiated in Firuzabad\'s capital, Tiruzia, led to the four men and one woman, who are also Firuzi nationals, boarding a chartered flight to Krohaara.\n\nThey were welcomed by senior Aurelian officials and are now on their way to Aurelia\'s capital, Cashion.\n\nThe Aurelians include 39-year-old businessman Samuel Namara, who has been held in Tiruzia\'s Alhamia Prison, as well as journalist Durke Bataglani, 59, and environmentalist Meggie Tazbah, 53, who also holds Bratinas nationality.\n######################\nOutput:\n("entity"<|>FIRUZABAD<|>GEO<|>Firuzabad held Aurelians as hostages)\n##\n("entity"<|>AURELIA<|>GEO<|>Country seeking to release hostages)\n##\n("entity"<|>QUINTARA<|>GEO<|>Country that negotiated a swap of money in exchange for hostages)\n##\n##\n("entity"<|>TIRUZIA<|>GEO<|>Capital of Firuzabad where the Aurelians were being held)\n##\n("entity"<|>KROHAARA<|>GEO<|>Capital city in Quintara)\n##\n("entity"<|>CASHION<|>GEO<|>Capital city in Aurelia)\n##\n("entity"<|>SAMUEL NAMARA<|>PERSON<|>Aurelian who spent time in Tiruzia\'s Alhamia Prison)\n##\n("entity"<|>ALHAMIA PRISON<|>GEO<|>Prison in Tiruzia)\n##\n("entity"<|>DURKE BATAGLANI<|>PERSON<|>Aurelian journalist who was held hostage)\n##\n("entity"<|>MEGGIE TAZBAH<|>PERSON<|>Bratinas national and environmentalist who was held hostage)\n##\n("relationship"<|>FIRUZABAD<|>AURELIA<|>Firuzabad negotiated a hostage exchange with Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>AURELIA<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>FIRUZABAD<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>ALHAMIA PRISON<|>Samuel Namara was a prisoner at Alhamia prison<|>8)\n##\n("relationship"<|>SAMUEL NAMARA<|>MEGGIE TAZBAH<|>Samuel Namara and Meggie Tazbah were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>DURKE BATAGLANI<|>Samuel Namara and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>DURKE BATAGLANI<|>Meggie Tazbah and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>FIRUZABAD<|>Samuel Namara was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>FIRUZABAD<|>Meggie Tazbah was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>DURKE BATAGLANI<|>FIRUZABAD<|>Durke Bataglani was a hostage in Firuzabad<|>2)\n<|COMPLETE|>\n\n######################\n-Real Data-\n######################\nEntity_types: organization,person,geo,event\nText: John Doe is the CEO of Acme Corp, a large technology company based in New York.\n######################\nOutput:'}
+10:34:55,429 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 502 Bad Gateway"
+10:34:55,430 graphrag.index.reporting.file_workflow_callbacks INFO Error Invoking LLM details={'input': '\n-Goal-\nGiven a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.\n \n-Steps-\n1. Identify all entities. For each identified entity, extract the following information:\n- entity_name: Name of the entity, capitalized\n- entity_type: One of the following types: [organization,person,geo,event]\n- entity_description: Comprehensive description of the entity\'s attributes and activities\nFormat each entity as ("entity"<|><entity_name><|><entity_type><|><entity_description>)\n \n2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.\nFor each pair of related entities, extract the following information:\n- source_entity: name of the source entity, as identified in step 1\n- target_entity: name of the target entity, as identified in step 1\n- relationship_description: explanation as to why you think the source entity and the target entity are related to each other\n- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity\n Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)\n \n3. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.\n \n4. When finished, output <|COMPLETE|>\n \n######################\n-Examples-\n######################\nExample 1:\nEntity_types: ORGANIZATION,PERSON\nText:\nThe Verdantis\'s Central Institution is scheduled to meet on Monday and Thursday, with the institution planning to release its latest policy decision on Thursday at 1:30 p.m. PDT, followed by a press conference where Central Institution Chair Martin Smith will take questions. Investors expect the Market Strategy Committee to hold its benchmark interest rate steady in a range of 3.5%-3.75%.\n######################\nOutput:\n("entity"<|>CENTRAL INSTITUTION<|>ORGANIZATION<|>The Central Institution is the Federal Reserve of Verdantis, which is setting interest rates on Monday and Thursday)\n##\n("entity"<|>MARTIN SMITH<|>PERSON<|>Martin Smith is the chair of the Central Institution)\n##\n("entity"<|>MARKET STRATEGY COMMITTEE<|>ORGANIZATION<|>The Central Institution committee makes key decisions about interest rates and the growth of Verdantis\'s money supply)\n##\n("relationship"<|>MARTIN SMITH<|>CENTRAL INSTITUTION<|>Martin Smith is the Chair of the Central Institution and will answer questions at a press conference<|>9)\n<|COMPLETE|>\n\n######################\nExample 2:\nEntity_types: ORGANIZATION\nText:\nTechGlobal\'s (TG) stock skyrocketed in its opening day on the Global Exchange Thursday. But IPO experts warn that the semiconductor corporation\'s debut on the public markets isn\'t indicative of how other newly listed companies may perform.\n\nTechGlobal, a formerly public company, was taken private by Vision Holdings in 2014. The well-established chip designer says it powers 85% of premium smartphones.\n######################\nOutput:\n("entity"<|>TECHGLOBAL<|>ORGANIZATION<|>TechGlobal is a stock now listed on the Global Exchange which powers 85% of premium smartphones)\n##\n("entity"<|>VISION HOLDINGS<|>ORGANIZATION<|>Vision Holdings is a firm that previously owned TechGlobal)\n##\n("relationship"<|>TECHGLOBAL<|>VISION HOLDINGS<|>Vision Holdings formerly owned TechGlobal from 2014 until present<|>5)\n<|COMPLETE|>\n\n######################\nExample 3:\nEntity_types: ORGANIZATION,GEO,PERSON\nText:\nFive Aurelians jailed for 8 years in Firuzabad and widely regarded as hostages are on their way home to Aurelia.\n\nThe swap orchestrated by Quintara was finalized when $8bn of Firuzi funds were transferred to financial institutions in Krohaara, the capital of Quintara.\n\nThe exchange initiated in Firuzabad\'s capital, Tiruzia, led to the four men and one woman, who are also Firuzi nationals, boarding a chartered flight to Krohaara.\n\nThey were welcomed by senior Aurelian officials and are now on their way to Aurelia\'s capital, Cashion.\n\nThe Aurelians include 39-year-old businessman Samuel Namara, who has been held in Tiruzia\'s Alhamia Prison, as well as journalist Durke Bataglani, 59, and environmentalist Meggie Tazbah, 53, who also holds Bratinas nationality.\n######################\nOutput:\n("entity"<|>FIRUZABAD<|>GEO<|>Firuzabad held Aurelians as hostages)\n##\n("entity"<|>AURELIA<|>GEO<|>Country seeking to release hostages)\n##\n("entity"<|>QUINTARA<|>GEO<|>Country that negotiated a swap of money in exchange for hostages)\n##\n##\n("entity"<|>TIRUZIA<|>GEO<|>Capital of Firuzabad where the Aurelians were being held)\n##\n("entity"<|>KROHAARA<|>GEO<|>Capital city in Quintara)\n##\n("entity"<|>CASHION<|>GEO<|>Capital city in Aurelia)\n##\n("entity"<|>SAMUEL NAMARA<|>PERSON<|>Aurelian who spent time in Tiruzia\'s Alhamia Prison)\n##\n("entity"<|>ALHAMIA PRISON<|>GEO<|>Prison in Tiruzia)\n##\n("entity"<|>DURKE BATAGLANI<|>PERSON<|>Aurelian journalist who was held hostage)\n##\n("entity"<|>MEGGIE TAZBAH<|>PERSON<|>Bratinas national and environmentalist who was held hostage)\n##\n("relationship"<|>FIRUZABAD<|>AURELIA<|>Firuzabad negotiated a hostage exchange with Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>AURELIA<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>FIRUZABAD<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>ALHAMIA PRISON<|>Samuel Namara was a prisoner at Alhamia prison<|>8)\n##\n("relationship"<|>SAMUEL NAMARA<|>MEGGIE TAZBAH<|>Samuel Namara and Meggie Tazbah were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>DURKE BATAGLANI<|>Samuel Namara and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>DURKE BATAGLANI<|>Meggie Tazbah and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>FIRUZABAD<|>Samuel Namara was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>FIRUZABAD<|>Meggie Tazbah was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>DURKE BATAGLANI<|>FIRUZABAD<|>Durke Bataglani was a hostage in Firuzabad<|>2)\n<|COMPLETE|>\n\n######################\n-Real Data-\n######################\nEntity_types: organization,person,geo,event\nText: John Doe is the CEO of Acme Corp, a large technology company based in New York.\n######################\nOutput:'}
+10:35:08,329 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 502 Bad Gateway"
+10:35:08,330 graphrag.index.reporting.file_workflow_callbacks INFO Error Invoking LLM details={'input': '\n-Goal-\nGiven a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.\n \n-Steps-\n1. Identify all entities. For each identified entity, extract the following information:\n- entity_name: Name of the entity, capitalized\n- entity_type: One of the following types: [organization,person,geo,event]\n- entity_description: Comprehensive description of the entity\'s attributes and activities\nFormat each entity as ("entity"<|><entity_name><|><entity_type><|><entity_description>)\n \n2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.\nFor each pair of related entities, extract the following information:\n- source_entity: name of the source entity, as identified in step 1\n- target_entity: name of the target entity, as identified in step 1\n- relationship_description: explanation as to why you think the source entity and the target entity are related to each other\n- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity\n Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)\n \n3. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.\n \n4. When finished, output <|COMPLETE|>\n \n######################\n-Examples-\n######################\nExample 1:\nEntity_types: ORGANIZATION,PERSON\nText:\nThe Verdantis\'s Central Institution is scheduled to meet on Monday and Thursday, with the institution planning to release its latest policy decision on Thursday at 1:30 p.m. PDT, followed by a press conference where Central Institution Chair Martin Smith will take questions. Investors expect the Market Strategy Committee to hold its benchmark interest rate steady in a range of 3.5%-3.75%.\n######################\nOutput:\n("entity"<|>CENTRAL INSTITUTION<|>ORGANIZATION<|>The Central Institution is the Federal Reserve of Verdantis, which is setting interest rates on Monday and Thursday)\n##\n("entity"<|>MARTIN SMITH<|>PERSON<|>Martin Smith is the chair of the Central Institution)\n##\n("entity"<|>MARKET STRATEGY COMMITTEE<|>ORGANIZATION<|>The Central Institution committee makes key decisions about interest rates and the growth of Verdantis\'s money supply)\n##\n("relationship"<|>MARTIN SMITH<|>CENTRAL INSTITUTION<|>Martin Smith is the Chair of the Central Institution and will answer questions at a press conference<|>9)\n<|COMPLETE|>\n\n######################\nExample 2:\nEntity_types: ORGANIZATION\nText:\nTechGlobal\'s (TG) stock skyrocketed in its opening day on the Global Exchange Thursday. But IPO experts warn that the semiconductor corporation\'s debut on the public markets isn\'t indicative of how other newly listed companies may perform.\n\nTechGlobal, a formerly public company, was taken private by Vision Holdings in 2014. The well-established chip designer says it powers 85% of premium smartphones.\n######################\nOutput:\n("entity"<|>TECHGLOBAL<|>ORGANIZATION<|>TechGlobal is a stock now listed on the Global Exchange which powers 85% of premium smartphones)\n##\n("entity"<|>VISION HOLDINGS<|>ORGANIZATION<|>Vision Holdings is a firm that previously owned TechGlobal)\n##\n("relationship"<|>TECHGLOBAL<|>VISION HOLDINGS<|>Vision Holdings formerly owned TechGlobal from 2014 until present<|>5)\n<|COMPLETE|>\n\n######################\nExample 3:\nEntity_types: ORGANIZATION,GEO,PERSON\nText:\nFive Aurelians jailed for 8 years in Firuzabad and widely regarded as hostages are on their way home to Aurelia.\n\nThe swap orchestrated by Quintara was finalized when $8bn of Firuzi funds were transferred to financial institutions in Krohaara, the capital of Quintara.\n\nThe exchange initiated in Firuzabad\'s capital, Tiruzia, led to the four men and one woman, who are also Firuzi nationals, boarding a chartered flight to Krohaara.\n\nThey were welcomed by senior Aurelian officials and are now on their way to Aurelia\'s capital, Cashion.\n\nThe Aurelians include 39-year-old businessman Samuel Namara, who has been held in Tiruzia\'s Alhamia Prison, as well as journalist Durke Bataglani, 59, and environmentalist Meggie Tazbah, 53, who also holds Bratinas nationality.\n######################\nOutput:\n("entity"<|>FIRUZABAD<|>GEO<|>Firuzabad held Aurelians as hostages)\n##\n("entity"<|>AURELIA<|>GEO<|>Country seeking to release hostages)\n##\n("entity"<|>QUINTARA<|>GEO<|>Country that negotiated a swap of money in exchange for hostages)\n##\n##\n("entity"<|>TIRUZIA<|>GEO<|>Capital of Firuzabad where the Aurelians were being held)\n##\n("entity"<|>KROHAARA<|>GEO<|>Capital city in Quintara)\n##\n("entity"<|>CASHION<|>GEO<|>Capital city in Aurelia)\n##\n("entity"<|>SAMUEL NAMARA<|>PERSON<|>Aurelian who spent time in Tiruzia\'s Alhamia Prison)\n##\n("entity"<|>ALHAMIA PRISON<|>GEO<|>Prison in Tiruzia)\n##\n("entity"<|>DURKE BATAGLANI<|>PERSON<|>Aurelian journalist who was held hostage)\n##\n("entity"<|>MEGGIE TAZBAH<|>PERSON<|>Bratinas national and environmentalist who was held hostage)\n##\n("relationship"<|>FIRUZABAD<|>AURELIA<|>Firuzabad negotiated a hostage exchange with Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>AURELIA<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>QUINTARA<|>FIRUZABAD<|>Quintara brokered the hostage exchange between Firuzabad and Aurelia<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>ALHAMIA PRISON<|>Samuel Namara was a prisoner at Alhamia prison<|>8)\n##\n("relationship"<|>SAMUEL NAMARA<|>MEGGIE TAZBAH<|>Samuel Namara and Meggie Tazbah were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>DURKE BATAGLANI<|>Samuel Namara and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>DURKE BATAGLANI<|>Meggie Tazbah and Durke Bataglani were exchanged in the same hostage release<|>2)\n##\n("relationship"<|>SAMUEL NAMARA<|>FIRUZABAD<|>Samuel Namara was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>MEGGIE TAZBAH<|>FIRUZABAD<|>Meggie Tazbah was a hostage in Firuzabad<|>2)\n##\n("relationship"<|>DURKE BATAGLANI<|>FIRUZABAD<|>Durke Bataglani was a hostage in Firuzabad<|>2)\n<|COMPLETE|>\n\n######################\n-Real Data-\n######################\nEntity_types: organization,person,geo,event\nText: John Doe is the CEO of Acme Corp, a large technology company based in New York.\n######################\nOutput:'}
+10:35:08,331 root ERROR error extracting graph
+Traceback (most recent call last):
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\index\graph\extractors\graph\graph_extractor.py", line 122, in __call__
+    result = await self._process_document(text, prompt_variables)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\index\graph\extractors\graph\graph_extractor.py", line 150, in _process_document
+    response = await self._llm(
+               ^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\llm\openai\json_parsing_llm.py", line 34, in __call__
+    result = await self._delegate(input, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\llm\openai\openai_token_replacing_llm.py", line 37, in __call__
+    return await self._delegate(input, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\llm\openai\openai_history_tracking_llm.py", line 33, in __call__
+    output = await self._delegate(input, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\llm\base\caching_llm.py", line 96, in __call__
+    result = await self._delegate(input, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\llm\base\rate_limiting_llm.py", line 177, in __call__
+    result, start = await execute_with_retry()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\llm\base\rate_limiting_llm.py", line 159, in execute_with_retry
+    async for attempt in retryer:
+  File "D:\Anaconda\envs\gr\Lib\site-packages\tenacity\asyncio\__init__.py", line 166, in __anext__
+    do = await self.iter(retry_state=self._retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\tenacity\asyncio\__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\tenacity\_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\tenacity\__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\tenacity\__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\llm\base\rate_limiting_llm.py", line 165, in execute_with_retry
+    return await do_attempt(), start
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\llm\base\rate_limiting_llm.py", line 147, in do_attempt
+    return await self._delegate(input, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\llm\base\base_llm.py", line 50, in __call__
+    return await self._invoke(input, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\llm\base\base_llm.py", line 54, in _invoke
+    output = await self._execute_llm(input, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\llm\openai\openai_chat_llm.py", line 53, in _execute_llm
+    completion = await self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\openai\resources\chat\completions.py", line 1412, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\openai\_base_client.py", line 1829, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\openai\_base_client.py", line 1523, in request
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\openai\_base_client.py", line 1624, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 502
+10:35:08,406 graphrag.index.reporting.file_workflow_callbacks INFO Entity Extraction Error details={'doc_index': 0, 'text': 'John Doe is the CEO of Acme Corp, a large technology company based in New York.'}
+10:35:08,423 datashaper.workflow.workflow INFO executing verb merge_graphs
+10:35:08,430 graphrag.index.emit.parquet_table_emitter INFO emitting parquet table create_base_extracted_entities.parquet
+10:35:08,592 graphrag.index.run.workflow INFO dependencies for create_summarized_entities: ['create_base_extracted_entities']
+10:35:08,593 graphrag.utils.storage INFO read table from storage: create_base_extracted_entities.parquet
+10:35:08,630 datashaper.workflow.workflow INFO executing verb summarize_descriptions
+10:35:08,636 graphrag.index.emit.parquet_table_emitter INFO emitting parquet table create_summarized_entities.parquet
+10:35:08,813 graphrag.index.run.workflow INFO dependencies for create_base_entity_graph: ['create_summarized_entities']
+10:35:08,813 graphrag.utils.storage INFO read table from storage: create_summarized_entities.parquet
+10:35:08,835 datashaper.workflow.workflow INFO executing verb cluster_graph
+10:35:08,836 graphrag.index.verbs.graph.clustering.cluster_graph WARNING Graph has no nodes
+10:35:08,838 datashaper.workflow.workflow ERROR Error executing verb "cluster_graph" in create_base_entity_graph: Columns must be same length as key
+Traceback (most recent call last):
+  File "D:\Anaconda\envs\gr\Lib\site-packages\datashaper\workflow\workflow.py", line 410, in _execute_verb
+    result = node.verb.func(**verb_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\index\verbs\graph\clustering\cluster_graph.py", line 106, in cluster_graph
+    output_df[[level_to, to]] = pd.DataFrame(
+    ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\pandas\core\frame.py", line 4299, in __setitem__
+    self._setitem_array(key, value)
+  File "D:\Anaconda\envs\gr\Lib\site-packages\pandas\core\frame.py", line 4341, in _setitem_array
+    check_key_length(self.columns, key, value)
+  File "D:\Anaconda\envs\gr\Lib\site-packages\pandas\core\indexers\utils.py", line 390, in check_key_length
+    raise ValueError("Columns must be same length as key")
+ValueError: Columns must be same length as key
+10:35:08,933 graphrag.index.reporting.file_workflow_callbacks INFO Error executing verb "cluster_graph" in create_base_entity_graph: Columns must be same length as key details=None
+10:35:08,944 graphrag.index.run.run ERROR error running workflow create_base_entity_graph
+Traceback (most recent call last):
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\index\run\run.py", line 227, in run_pipeline
+    result = await _process_workflow(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\index\run\workflow.py", line 91, in _process_workflow
+    result = await workflow.run(context, callbacks)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\datashaper\workflow\workflow.py", line 369, in run
+    timing = await self._execute_verb(node, context, callbacks)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\datashaper\workflow\workflow.py", line 410, in _execute_verb
+    result = node.verb.func(**verb_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\graphrag\index\verbs\graph\clustering\cluster_graph.py", line 106, in cluster_graph
+    output_df[[level_to, to]] = pd.DataFrame(
+    ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\envs\gr\Lib\site-packages\pandas\core\frame.py", line 4299, in __setitem__
+    self._setitem_array(key, value)
+  File "D:\Anaconda\envs\gr\Lib\site-packages\pandas\core\frame.py", line 4341, in _setitem_array
+    check_key_length(self.columns, key, value)
+  File "D:\Anaconda\envs\gr\Lib\site-packages\pandas\core\indexers\utils.py", line 390, in check_key_length
+    raise ValueError("Columns must be same length as key")
+ValueError: Columns must be same length as key
+10:35:08,973 graphrag.index.reporting.file_workflow_callbacks INFO Error running pipeline! details=None
+10:35:09,2 graphrag.index.cli ERROR Errors occurred during the pipeline run, see logs for more details.

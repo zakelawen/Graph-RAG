@@ -1,0 +1,30 @@
+{
+    "total_runtime": 6.873732805252075,
+    "num_documents": 1,
+    "input_load_time": 0,
+    "workflows": {
+        "create_base_text_units": {
+            "overall": 0.1654977798461914,
+            "0_orderby": 0.0033800601959228516,
+            "1_zip": 0.0020699501037597656,
+            "2_aggregate_override": 0.0032160282135009766,
+            "3_chunk": 0.12521624565124512,
+            "4_select": 0.0029761791229248047,
+            "5_unroll": 0.0029926300048828125,
+            "6_rename": 0.0030469894409179688,
+            "7_genid": 0.0029909610748291016,
+            "8_unzip": 0.003992319107055664,
+            "9_copy": 0.0030698776245117188,
+            "10_filter": 0.010357856750488281
+        },
+        "create_base_extracted_entities": {
+            "overall": 6.327070236206055,
+            "0_entity_extract": 6.308984041213989,
+            "1_merge_graphs": 0.011786460876464844
+        },
+        "create_summarized_entities": {
+            "overall": 0.014078140258789062,
+            "0_summarize_descriptions": 0.00912332534790039
+        }
+    }
+}
